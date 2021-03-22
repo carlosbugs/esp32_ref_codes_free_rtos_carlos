@@ -23,9 +23,9 @@ static void led_1_toggle(void *arg)
     while (1)
     {
        gpio_set_level(led_1, 0);
-       vTaskDelay(200 / portTICK_PERIOD_MS);
+       vTaskDelay(100 / portTICK_PERIOD_MS);
        gpio_set_level(led_1, 1);
-       vTaskDelay(200 / portTICK_PERIOD_MS);
+       vTaskDelay(100 / portTICK_PERIOD_MS);
     }
 }
 
@@ -35,9 +35,20 @@ static void led_2_toggle(void *arg)
     while (1)
     {
        gpio_set_level(led_2, 0);
-       vTaskDelay(2000 / portTICK_PERIOD_MS);
+       vTaskDelay(1000 / portTICK_PERIOD_MS);
        gpio_set_level(led_2, 1);
-       vTaskDelay(2000 / portTICK_PERIOD_MS);
+       vTaskDelay(1000 / portTICK_PERIOD_MS);
+    }
+}
+
+static void serial_interface_test(void *arg)
+{
+    int cont=0;
+    while (1)
+    {
+        printf("\ncontador progressivo -> %us",cont);    
+        cont++;
+        vTaskDelay(1000 / portTICK_PERIOD_MS);
     }
 }
 
@@ -65,6 +76,7 @@ void app_main()
 
     xTaskCreate(led_1_toggle, "led_1_toggle", configMINIMAL_STACK_SIZE * 8, NULL, 4, NULL);
     xTaskCreate(led_2_toggle, "led_2_toggle", configMINIMAL_STACK_SIZE * 8, NULL, 5, NULL);
+    xTaskCreate(serial_interface_test, "serial_interface_test", configMINIMAL_STACK_SIZE * 8, NULL, 3, NULL);
     
     while(1) {
    
