@@ -1,0 +1,142 @@
+{
+	"backtrace" : 3,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"externalproject_add",
+			"ulp_embed_binary"
+		],
+		"files" : 
+		[
+			"C:/Users/CarlosBugs/.platformio/packages/tool-cmake/share/cmake-3.16/Modules/ExternalProject.cmake",
+			"C:/Users/CarlosBugs/.platformio/packages/framework-espidf/components/ulp/project_include.cmake",
+			"main/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 8,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 44,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 3182,
+				"parent" : 2
+			}
+		]
+	},
+	"folder" : 
+	{
+		"name" : "ExternalProjectTargets/ulp_main"
+	},
+	"id" : "ulp_main::@7368607ed66887415643",
+	"name" : "ulp_main",
+	"paths" : 
+	{
+		"build" : "esp-idf/main",
+		"source" : "main"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : ".pio/build/az-delivery-devkit-v4/esp-idf/main/CMakeFiles/ulp_main",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : ".pio/build/az-delivery-devkit-v4/esp-idf/main/CMakeFiles/ulp_main.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : ".pio/build/az-delivery-devkit-v4/esp-idf/main/CMakeFiles/ulp_main-complete.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : ".pio/build/az-delivery-devkit-v4/esp-idf/main/ulp_main-prefix/src/ulp_main-stamp/ulp_main-install.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : ".pio/build/az-delivery-devkit-v4/esp-idf/main/ulp_main-prefix/src/ulp_main-stamp/ulp_main-mkdir.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : ".pio/build/az-delivery-devkit-v4/esp-idf/main/ulp_main-prefix/src/ulp_main-stamp/ulp_main-download.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : ".pio/build/az-delivery-devkit-v4/esp-idf/main/ulp_main-prefix/src/ulp_main-stamp/ulp_main-update.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : ".pio/build/az-delivery-devkit-v4/esp-idf/main/ulp_main-prefix/src/ulp_main-stamp/ulp_main-patch.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : ".pio/build/az-delivery-devkit-v4/esp-idf/main/ulp_main-prefix/src/ulp_main-stamp/ulp_main-configure.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : ".pio/build/az-delivery-devkit-v4/esp-idf/main/ulp_main-prefix/src/ulp_main-stamp/ulp_main-build.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

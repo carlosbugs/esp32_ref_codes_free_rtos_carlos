@@ -1,0 +1,5 @@
+entry T 00000000 
+exit T 00000034 
+high_thr B 00000050 
+last_result B 00000054 
+wake_up T 00000038 

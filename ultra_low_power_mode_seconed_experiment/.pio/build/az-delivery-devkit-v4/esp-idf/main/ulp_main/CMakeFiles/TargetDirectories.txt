@@ -1,0 +1,5 @@
+C:/Users/CarlosBugs/Documents/PlatformIO/esp32_ref_codes_free_rtos_carlos/ultra_low_power_mode_seconed_experiment/.pio/build/az-delivery-devkit-v4/esp-idf/main/ulp_main/CMakeFiles/ulp_main_ld_script.dir
+C:/Users/CarlosBugs/Documents/PlatformIO/esp32_ref_codes_free_rtos_carlos/ultra_low_power_mode_seconed_experiment/.pio/build/az-delivery-devkit-v4/esp-idf/main/ulp_main/CMakeFiles/ulp_main.dir
+C:/Users/CarlosBugs/Documents/PlatformIO/esp32_ref_codes_free_rtos_carlos/ultra_low_power_mode_seconed_experiment/.pio/build/az-delivery-devkit-v4/esp-idf/main/ulp_main/CMakeFiles/build.dir
+C:/Users/CarlosBugs/Documents/PlatformIO/esp32_ref_codes_free_rtos_carlos/ultra_low_power_mode_seconed_experiment/.pio/build/az-delivery-devkit-v4/esp-idf/main/ulp_main/CMakeFiles/edit_cache.dir
+C:/Users/CarlosBugs/Documents/PlatformIO/esp32_ref_codes_free_rtos_carlos/ultra_low_power_mode_seconed_experiment/.pio/build/az-delivery-devkit-v4/esp-idf/main/ulp_main/CMakeFiles/rebuild_cache.dir

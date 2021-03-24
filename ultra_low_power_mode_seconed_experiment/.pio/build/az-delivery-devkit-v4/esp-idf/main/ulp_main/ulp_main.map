@@ -1,0 +1,37 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+ram              0x00000000         0x00000400         rw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD CMakeFiles/ulp_main.dir/adc.ulp.S.obj
+
+.text           0x00000000       0x50 load address 0x0000000c
+ *(.text)
+ .text          0x00000000       0x50 CMakeFiles/ulp_main.dir/adc.ulp.S.obj
+                0x00000000                entry
+                0x00000034                exit
+                0x00000038                wake_up
+
+.data           0x00000050        0x0 load address 0x0000005c
+                0x00000050                . = ALIGN (0x4)
+ *(.data)
+ .data          0x00000050        0x0 CMakeFiles/ulp_main.dir/adc.ulp.S.obj
+
+.bss            0x00000050        0x8 load address 0x0000005c
+                0x00000050                . = ALIGN (0x4)
+ *(.bss)
+ .bss           0x00000050        0x8 CMakeFiles/ulp_main.dir/adc.ulp.S.obj
+                0x00000050                high_thr
+                0x00000054                last_result
+
+.header         0x00000058        0xc load address 0x00000000
+                0x00000058        0x4 LONG 0x706c75
+                0x0000005c        0x2 SHORT 0xc LOADADDR (.text)
+                0x0000005e        0x2 SHORT 0x50 SIZEOF (.text)
+                0x00000060        0x2 SHORT 0x0 SIZEOF (.data)
+                0x00000062        0x2 SHORT 0x8 SIZEOF (.bss)
+OUTPUT(ulp_main elf32-esp32ulp)
