@@ -39,6 +39,7 @@ void uisub_init(uisub_config_t c)
     io_conf.pull_up_en = GPIO_PULLUP_DISABLE;
     gpio_config(&io_conf);
 
+
     rotenc_init(config.rotenc_clk_pin, config.rotenc_dt_pin);
     rotenc_setPosChangedCallback(rotenc_handler);
 
