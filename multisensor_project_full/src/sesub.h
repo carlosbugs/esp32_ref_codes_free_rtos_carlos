@@ -4,7 +4,7 @@
 
 #include "common.h"
 
-typedef void (*sensor_reading_f)(sensor_reading_t);
+typedef void (*sensor_reading_f)(sensor_reading_t);//criou um tipo de função (sensor_reading_f) que nao retorna nada e recebe como argumenbto (sensor_reading_t) -> imprimir sensores
 typedef void (*temp_alarm_f)(void);
 
 typedef struct
@@ -15,7 +15,7 @@ typedef struct
     float temp_high;
     float temp_low;
 
-    sensor_reading_f new_sensor_reading;
+    sensor_reading_f new_sensor_reading; // declara na struct uma função do tipo sensor_reading_f -> imprimir no oled o valor dos sensores
     temp_alarm_f temp_alarm;
 } sesub_config_t;
 

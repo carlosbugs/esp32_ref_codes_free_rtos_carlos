@@ -34,13 +34,14 @@ static void init_subsystems(void)
         .oled_scl = OLED_SCL,
     };
     uisub_init(ui_cfg);
+    
 
     sesub_config_t se_cfg = {
         .sensor_sda = SENSOR_BUS_SDA,
         .sensor_scl = SENSOR_BUS_SCL,
         .temp_high = 30,
         .temp_low = 10,
-        .new_sensor_reading = uisub_show,
+        .new_sensor_reading = uisub_show, //mapeia na memoria da struct a função uisub_show que vai ser usada para imprimir valores no dispplay oled
         .temp_alarm = alarm,
     };
     sesub_init(se_cfg);
