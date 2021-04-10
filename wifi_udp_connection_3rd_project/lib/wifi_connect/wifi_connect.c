@@ -60,8 +60,8 @@ void connect_wifi(connect_wifi_params_t p)
 
     wifi_config_t wifi_config = {
         .sta = {
-            .ssid = WIFI_SSID,
-            .password = WIFI_PASS,
+            .ssid = "bugs-note",
+            .password = "bugs1985",
             .threshold.authmode = WIFI_AUTH_WPA2_PSK,
             .pmf_cfg = {
                 .capable = true,
