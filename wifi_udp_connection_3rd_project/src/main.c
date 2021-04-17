@@ -68,11 +68,13 @@ static void start_udp_server(void)
                 }
                 data_buffer[len] = 0;
 
-                if (!strcmp(data_buffer, "temperature"))
+                printf("\n%s, temp=%d, humi=%d",data_buffer,temperature,humidity);
+
+                if (!strncmp(data_buffer, "temperature",4))
                 {
                     sprintf(data_buffer, "%d", temperature);
                 }
-                else if (!strcmp(data_buffer, "humidity"))
+                else if (!strncmp(data_buffer, "humidity",4))
                 {
                     sprintf(data_buffer, "%d", humidity);
                 }
@@ -81,6 +83,7 @@ static void start_udp_server(void)
                     sprintf(data_buffer, "err");
                 }
 
+                
                 len = strlen(data_buffer);
 
                 if (sendto(sock, data_buffer, len, 0,
@@ -90,6 +93,21 @@ static void start_udp_server(void)
                     ESP_LOGE(TAG, "sendto failed");
                     break;
                 }
+
+
+                //carlos command:
+                
+                sprintf(data_buffer, "\nreceived and proceed data succefully!\n" );
+                len = strlen(data_buffer);
+
+                if (sendto(sock, data_buffer, len, 0,
+                           (struct sockaddr *)&client_addr,
+                           sizeof(client_addr)) < 0)
+                {
+                    ESP_LOGE(TAG, "sendto failed");
+                    break;
+                }
+
             }
         }
 
@@ -130,11 +148,13 @@ static void read_dht11(void *arg)
         dht_read_data(DHT_TYPE_DHT11, DHT11_PIN, &humidity, &temperature);
         humidity /= 10;
         temperature /= 10;
+        //printf("umidade = %u  , temperatura %u\n", humidity,temperature);
     }
 }
 
 void app_main()
 {
+    printf("\n\nwelcome home\n\n");
     connect_wifi_params_t p = {
         .on_connected = wifi_connected_cb,
         .on_failed = wifi_failed_cb};
